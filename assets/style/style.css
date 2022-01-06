@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
+:root {
+  --primary-color: white;
+  --secondary-color: #113631;
+  --third-color: #d6efc7;
+  --alternate-color: #fad586;
+
+  --title-font-family: "Playfair Display", sans-serif;
+  --p-font-family: "Merriweather", sans-serif;
+}
+
+body {
+  font-family: var(--title-font-family);
+  margin: 0;
+  color: var(--primary-color);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Awal nav */
+.nav {
+  background-color: var(--primary-color);
+  overflow: hidden;
+  top: 0;
+  padding: 5px 20px;
+  position: sticky;
+  z-index: 1;
+}
+#brand {
+  padding: 0;
+}
+.nav a {
+  float: left;
+  display: block;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 2px solid white;
+}
+
+.nav a:hover {
+  border-bottom: 2px solid #132c33;
+}
+
+.nav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+    position: relative;
+  }
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .nav a {
+    display: none;
+  }
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+/*  AKHIR nav */
+
+.container {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+#introduction {
+  background-color: var(--secondary-color);
+  font-family: "Playfair Display", sans-serif;
+  color: var(--primary-color);
+}
+
+article {
+  float: left;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+aside {
+  width: 40%;
+}
+
+.monstera img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  transform: rotate(30deg);
+}
+
+h2 {
+  font-size: 54px;
+}
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.button {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 600;
+  border: 2px solid #fad586;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 40px 20px 40px 0;
+}
+
+.button::first-letter {
+  font-size: 150%;
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 70%;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#view-collection {
+  color: #fad586;
+  background-color: var(--secondary-color);
+}
+#view-collection:hover {
+  color: var(--secondary-color);
+  background-color: var(--alternate-color);
+}
+#shopnow {
+  color: var(--secondary-color);
+  background-color: var(--alternate-color);
+}
+#shopnow:hover {
+  background-color: var(--secondary-color);
+  color: var(--alternate-color);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    height: auto;
+    width: 100%;
+    padding-top: 30px;
+  }
+  article {
+    width: 100%;
+  }
+  aside {
+    display: none;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+/* Awal Product */
+#product {
+  background-color: var(--primary-color);
+  font-family: "Playfair Display", sans-serif;
+  color: var(--secondary-color);
+  padding: 20px 0;
+  display: flex;
+}
+.product-image {
+  display: block;
+  width: 30%;
+  color: var(--primary-color);
+  height: 90%;
+}
+.product-row {
+  height: 80%;
+  display: flex;
+}
+
+.product-details {
+  margin-top: 30px;
+  width: 70%;
+  height: 50%;
+  justify-content: center;
+  background-color: var(--third-color);
+  padding: 40px 0;
+}
+.monstera-image img {
+  position: absolute;
+  left: 100px;
+  width: 350px;
+  height: auto;
+  margin: 40px;
+}
+.product-price-row {
+  padding: 10px 0;
+  width: 100%;
+  height: 35%;
+  background-color: var(--secondary-color);
+}
+#product-number {
+  height: 20%;
+  padding: 10px 0;
+  z-index: 1;
+}
+#product-stock,
+#price {
+  color: var(--third-color);
+}
+
+.product-price-column {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px 0;
+}
+h5,
+h4 {
+  margin: 0 auto;
+}
+h5 {
+  font-family: var(--p-font-family);
+  font-size: 18px;
+}
+h4 {
+  font-size: 36px;
+}
+p {
+  margin: 15px auto 0 auto;
+  font-family: var(--p-font-family);
+}
+#buy-now:hover {
+  color: #fad586;
+  background-color: var(--secondary-color);
+  border: none;
+}
+#buy-now {
+  color: var(--secondary-color);
+  background-color: var(--alternate-color);
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  #product {
+    flex-direction: column;
+  }
+  .product-details,
+  .product-image {
+    width: 90%;
+    margin-top: 0;
+  }
+  .button-group {
+    display: block;
+    margin: 20px auto;
+  }
+  .button {
+    margin: 15px 0 0 0;
+  }
+  .product-image {
+    height: 500px;
+  }
+  .product-row {
+    display: block;
+    flex-direction: row;
+  }
+  .product-price-row {
+    height: 100%;
+  }
+  .monstera-image img {
+    top: 750px;
+    left: 35px;
+    position: absolute;
+    width: 60%;
+    height: auto;
+  }
+}
+
+/* Akhir Product */
+
+/* Awal Categories */
+
+#section-title {
+  color: var(--secondary-color);
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 50%;
+}
+.categories-name {
+  width: 200px;
+  color: var(--primary-color);
+  position: absolute;
+  margin-top: 30px;
+  padding: 10px 0;
+  background-color: var(--secondary-color);
+}
+.column {
+  display: flex;
+
+  box-sizing: border-box;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.column::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card {
+  flex-direction: column;
+  text-align: left;
+  margin: 10px 15px;
+  cursor: pointer;
+  width: auto;
+  height: 350px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Review */
+
+#review-customers {
+  background: url(../img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#review-customers h4 {
+  color: var(--primary-color);
+}
+.card-review {
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 0;
+  margin: 10px 15px;
+  cursor: pointer;
+  width: auto;
+  height: 350px;
+  overflow: hidden;
+  background: var(--secondary-color);
+  background: rgb(24, 77, 71, 0.6);
+}
+.card-review img {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.review {
+  height: auto;
+  width: 300px;
+  text-align: center;
+  margin: 20px auto;
+}
+.review p {
+  margin-top: 50px;
+  font-size: 14px;
+  width: 70%;
+}
+.review h3 {
+  width: 60%;
+}
+/* Akhir Review Customers */
+
+/* Awal Store details */
+
+#store {
+  display: flex;
+  height: auto;
+}
+#store-details {
+  display: flex;
+}
+#store-image {
+  width: 40%;
+  float: left;
+  margin: 0;
+}
+#store-image img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+#store-desc {
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+  height: auto;
+  padding: 40px 0;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#store-desc h4,
+#store-desc p,
+#store-desc h3 {
+  width: 70%;
+}
+@media screen and (max-width: 600px) {
+  #store-details {
+    display: block;
+  }
+  #store-image {
+    width: 100%;
+  }
+  #store-desc {
+    width: 100%;
+  }
+}
+
+/* Akhir Store details */
+
+/* Awal Galery */
+#galery {
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+.row-image {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+/* Create four equal columns that sits next to each other */
+
+#gallery {
+  display: block;
+  margin: 50px 0;
+}
+.gallery-title {
+  width: 100%;
+  margin: 0;
+}
+
+.row-image {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.column-image {
+  flex: 10%;
+  padding: 0 4px;
+  overflow: hidden;
+}
+
+.column-image img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+}
+.column-image img:hover {
+  filter: blur(2px);
+}
+
+@media screen and (max-width: 800px) {
+  .column-image {
+    flex: 20%;
+    max-width: 20%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  #gallery {
+    flex-direction: column;
+  }
+  .gallery-title,
+  .gallery-image {
+    width: 100%;
+  }
+  .column-image {
+    flex: 40%;
+    max-width: 40%;
+  }
+}
+
+/* Akhir Gallery */
+
+/* Awal Footer */
+
+#contact {
+  height: auto;
+  align-items: flex-end;
+}
+#row-contact {
+  height: 50%;
+  background: var(--secondary-color);
+  padding: 30px;
+}
+#contact h4 {
+  padding: 20px;
+  text-align: center;
+}
+#subscription {
+  align-items: center;
+  justify-content: center;
+}
+input[type="text"],
+input[type="submit"] {
+  font-family: var(--p-font-family);
+  text-align: left;
+  border: none;
+  text-decoration: none;
+  margin: 10px 5px 10px 0;
+}
+input[type="submit"] {
+  background-color: var(--alternate-color);
+
+  border: 2px solid var(--secondary-color);
+}
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: var(--alternate-color);
+  border: 2px solid var(--alternate-color);
+}
+@media screen and (max-width: 600px) {
+  #contact {
+    height: auto;
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+/* Akhir Footer */
