@@ -17,6 +17,7 @@ body {
   color: var(--primary-color);
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--primary-color);
 }
 
 /* Awal nav */
@@ -97,6 +98,22 @@ article {
 }
 aside {
   width: 40%;
+  position: relative;
+}
+#biodata {
+  padding: 40px 20px;
+  position: absolute;
+  height: auto;
+  margin: 50px;
+  text-align: center;
+  color: var(--secondary-color);
+  background: var(--third-color);
+  background-size: cover;
+  opacity: 0;
+  z-index: 1;
+}
+#biodata:hover {
+  opacity: 1;
 }
 
 .monstera img {
@@ -110,7 +127,7 @@ h2 {
   font-size: 54px;
 }
 p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -168,11 +185,18 @@ p {
     width: 100%;
     padding-top: 30px;
   }
+  #introduction {
+    flex-direction: column-reverse;
+  }
   article {
     width: 100%;
   }
   aside {
-    display: none;
+    width: 100%;
+  }
+  #biodata {
+    margin: 20px;
+    word-wrap: none;
   }
   h2,
   h3,
@@ -196,11 +220,13 @@ p {
   display: block;
   width: 30%;
   color: var(--primary-color);
-  height: 90%;
+
+  background-color: var(--secondary-color);
+  height: 100%;
 }
 .product-row {
-  height: 80%;
-  display: flex;
+  height: auto;
+  display: block;
 }
 
 .product-details {
@@ -211,23 +237,24 @@ p {
   background-color: var(--third-color);
   padding: 40px 0;
 }
+#productimage {
+  height: 65%;
+}
 .monstera-image img {
-  position: absolute;
-  left: 100px;
-  width: 350px;
-  height: auto;
-  margin: 40px;
+  vertical-align: middle;
+  margin: 25px 40px;
+  position: relative;
+  width: 70%;
+  max-height: 400px;
 }
 .product-price-row {
   padding: 10px 0;
   width: 100%;
-  height: 35%;
-  background-color: var(--secondary-color);
+  height: auto;
 }
 #product-number {
-  height: 20%;
+  height: auto;
   padding: 10px 0;
-  z-index: 1;
 }
 #product-stock,
 #price {
@@ -284,7 +311,10 @@ p {
     margin: 15px 0 0 0;
   }
   .product-image {
-    height: 500px;
+    height: 100%;
+  }
+  #productimage {
+    height: 50%;
   }
   .product-row {
     display: block;
@@ -294,11 +324,8 @@ p {
     height: 100%;
   }
   .monstera-image img {
-    top: 750px;
-    left: 35px;
-    position: absolute;
-    width: 60%;
-    height: auto;
+    position: relative;
+    width: 70%;
   }
 }
 
@@ -378,7 +405,7 @@ p {
   background: var(--secondary-color);
   background: rgb(24, 77, 71, 0.6);
 }
-.card-review img {
+#avatar {
   vertical-align: middle;
   width: 100px;
   height: 100px;
@@ -461,8 +488,6 @@ p {
   justify-content: center;
 }
 
-/* Create four equal columns that sits next to each other */
-
 #gallery {
   display: block;
   margin: 50px 0;
@@ -503,8 +528,6 @@ p {
     max-width: 20%;
   }
 }
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   #gallery {
     flex-direction: column;
@@ -521,16 +544,18 @@ p {
 
 /* Akhir Gallery */
 
-/* Awal Footer */
+/* Awal subcription */
 
 #contact {
-  height: auto;
+  height: 500px;
   align-items: flex-end;
 }
 #row-contact {
   height: 50%;
   background: var(--secondary-color);
   padding: 30px;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 #contact h4 {
   padding: 20px;
@@ -565,4 +590,4 @@ input[type="submit"]:hover {
     margin: 20px 0;
   }
 }
-/* Akhir Footer */
+/* Akhir subcription */
